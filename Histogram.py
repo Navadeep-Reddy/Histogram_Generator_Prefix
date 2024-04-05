@@ -33,8 +33,15 @@ for input_file in text_files:
                 if x[k][-1] in ['!', ',', '.', '?']:
                     x[k] = x[k][0: len(x[k]) - 1]
 
-            for a in x:
-                words.append(a)
+            for word in x:
+                #Adding all words to a list
+                words.append(word)
+                #Adding one if it already exits
+                if word in hist.keys():
+                    hist[word] += 1
+                #Creating new one if it doesn't exit already
+                else:
+                    hist[word] = 1
 
 
 #Eliminating duplicates (Do this after getting words from all text files)
