@@ -46,13 +46,13 @@ for w in unique_words:
     hist[w] = count
 
 #Subsection one where you write all the given words into words.txt
-with open("Z:\code\Write files\words.txt", 'w') as f:
+with open("Write files\words.txt", 'w') as f:
     for i in unique_words:
         f.write(i)
         f.write("\n")
 
 #Subsection two where you write the frequency
-with open('Z:\code\Write files\words-histogram.txt', 'w') as f:
+with open('Write files\words-histogram.txt', 'w') as f:
     for key, value in hist.items():
         freq = f"{key} : {value}"
         f.write(freq)
