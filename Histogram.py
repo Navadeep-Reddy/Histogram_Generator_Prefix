@@ -10,9 +10,6 @@ hist = {}
 #Making list for storing all words with duplicates
 words = []
 
-#variable for folder path(Not used)
-fold_path = "Z:\code\python-3.11.3-docs-text"
-
 #Store the list of text files from a folder
 text_files = glob.glob(os.path.join(sys.argv[1], "**/*.txt"), recursive = True)
 
@@ -53,16 +50,16 @@ for w in unique_words:
     hist[w] = count
 
 #Subsection one where you write all the given words into words.txt
-with open("Write files\words.txt", 'w') as f:
+with open("Write_files/words.txt", 'w') as f:
     for i in unique_words:
         f.write(i)
         f.write("\n")
 
 #Subsection two where you write the frequency
-with open('Write files\words-histogram.txt', 'w') as f:
+with open('Write_files/words-histogram.txt', 'w') as f:
     for key, value in hist.items():
         freq = f"{key} : {value}"
         f.write(freq)
         f.write('\n')
 
-print(sys.argv[1])
+
