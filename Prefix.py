@@ -6,7 +6,7 @@ try:
     #List to store words
     L = []
     # read words-histogram.txt
-    with open("Write files/words-histogram.txt", 'r') as f:
+    with open("Write_files/words-histogram.txt", 'r') as f:
         while True:
             q = f.readline()
             if not q:
